@@ -1,15 +1,17 @@
 console.log("Variable Types in JS. var,let & const")
-// var i = 5;
-// console.log(i)
-// var i = 7;
-// console.log(i)
-// i = 9;
-// console.log(i)
-// {
-//     var i = 11;
-//     console.log(i)
-// }
-// console.log(i)
+var i = 5;
+console.log(i)
+var i = 7;
+console.log(i)
+i = 9;
+console.log(i)
+{
+    var i = 11;
+    console.log(i)
+}
+console.log(i)
+
+
 //Now Lets see what happens with let
 let j = 20;
 console.log(j)
@@ -30,9 +32,12 @@ console.log(j)
 
 // let j = "aadi" ;
 
+
+
+
 //Now Lets see what happens with const
-// const k = 10;
-// console.log(k)
+const k = 10;
+console.log(k)
 //The below re_assignment will give error message as we declared the datatype of k as const.
 // k=11;
 // console.log(k)
