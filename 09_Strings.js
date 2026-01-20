@@ -143,4 +143,13 @@ console.log(text.endsWith("D"));
 let Str = "The amount is Rs 100000";
 //print the amount value: 
 console.log("The amount is Rs ".length)
-console.log(Str.slice("The amount is Rs ".length));
+let amount = Str.slice("The amount is Rs ".length);
+console.log(amount);
+
+//What is the type of amount now ?? 
+console.log(typeof amount);
+
+//How to convert this string into number: 
+amount = Number.parseInt(Str.slice("The amount is Rs ".length));
+console.log(amount);
+console.log(typeof amount);
