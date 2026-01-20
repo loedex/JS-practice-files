@@ -134,3 +134,7 @@ console.log(text.startsWith("He"));
 /*endsWith()*/
 // returns true if a string ends with a specified value. This method is case sensitive.
 console.log(text.endsWith("D"));
+
+
+//Note:
+/*All String Methods return a new value. They don't change the original string*/
