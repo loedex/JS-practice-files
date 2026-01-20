@@ -138,3 +138,9 @@ console.log(text.endsWith("D"));
 
 //Note:
 /*All String Methods return a new value. They don't change the original string*/
+
+/*Practice*/
+let Str = "The amount is Rs 100000";
+//print the amount value: 
+console.log("The amount is Rs ".length)
+console.log(Str.slice("The amount is Rs ".length));
