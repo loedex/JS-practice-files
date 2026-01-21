@@ -153,3 +153,88 @@ console.log(typeof amount);
 amount = Number.parseInt(Str.slice("The amount is Rs ".length));
 console.log(amount);
 console.log(typeof amount);
+
+const a=[1,2,3];
+console.log(a.toString());
+console.log(a.join("*"));
+
+//pop()
+// The pop() method removes the last element from an array:
+// The pop() method returns the value that was "popped out":
+console.log(a.pop());
+console.log(a);
+console.log(a.length);
+
+//push()
+// The push() method adds a new element to an array at the end:
+// The push() method returns the new array length:
+a.push(7);
+console.log(a.push(8));
+console.log(a);
+
+//shift()
+// The shift() method removes the first array element and "shifts" all other elements to a lower index.
+// The shift() method returns the value that was "shifted out":
+console.log(a.shift());
+console.log(a);
+console.log(a.length);
+
+//unshift()
+// The unshift() method adds a new element to an array at the beginning, and "unshifts" older elements:
+// The unshift() method returns the new array length:
+console.log(a.unshift(5));
+console.log(a);
+
+//delete()
+delete a[0];
+console.log(a);
+
+/*Merging Arrays / Concatenating Arrays */
+const A = [1,2,3,4,5];
+const B = [6,7,8,9,10];
+const C = [11,12,13,14,15];
+console.log(A.concat(C,B,"Hello"));
+console.log(A.concat(C,B,"Hello").length);
+
+//copyWithin()
+const D = [1,2,3,4,5,6,7,8,9,10]
+console.log(D);
+console.log(D.length);
+D.copyWithin(2,0);
+console.log(D);
+D.copyWithin(7,0,2);
+console.log(D);
+
+//flat()
+// The flat() method creates a new array with sub-array elements concatenated to a specified depth:
+const E = [1,[2,3],[4,5,6,7],8,[9,10]];
+console.log(E.flat());
+console.log(E.length);
+console.log(E.flat().length);
+
+//map()
+const F = [1,2,3,4,5];
+let r = F.map(x => [x,x*2]); //we are returning an array so we used box brackets. and we know that we can omit return keyword in Arrow Function
+console.log(r);
+console.log(F.length);
+console.log(r.length);
+
+//Remove Empty Values using flatMap():
+let G = ["Hello"," ","World"," "];
+console.log(G);
+let R = G.flatMap(x => x===" "? []:x);
+console.log(R);
+
+
+//splice()
+const H = ["A","B","C","D","E"];
+H.splice(2,0,"Kiwi"); // It also changes the original array
+console.log(H);
+console.log(H.length);
+console.log(H.splice(2,1,"Apple")); //returns the value that was deleted
+console.log(H);
+// Now just remove "Apple" from the arrayy:
+console.log(`Removed Value: `,H.splice(2,1));
+console.log(H);
+console.log(H.toSpliced(2,0,"Apple")); //toSpliced() method is a safe way to splice an array because it doesn't change the original array.
+console.log(H);
