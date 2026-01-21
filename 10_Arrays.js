@@ -54,3 +54,24 @@ console.log(FRUITS);
 //How to Recognize Array: 
 console.log(Array.isArray(FRUITS));
 console.log(FRUITS instanceof Array);
+
+
+/*Nested Arrays and Objects */
+//Values in objects can be arrays, and values in arrays can be objects:
+//Example: 
+const myObject = {
+    name: "Ali",
+    age:18,
+    cars:[{name:"BMW",models:["101","102","103"]},{name:"Fiat",models:["1","2","3"]},{name:"Fiesta",models:["10","11"]}],
+    city:"Lahore"
+}
+console.log(`Lenght of Array cars: `,myObject.cars.length);
+console.log(`Length of Array models in cars: `,myObject.cars[2].models.length);
+//Now to access arrays inside arrays: 
+for(let i=0;i<myObject.cars.length;i++){
+    console.log(myObject.cars[i].name);
+    for(let j=0;j<myObject.cars[i].models.length;j++){
+        console.log(myObject.cars[i].models[j]);
+    }
+
+}
