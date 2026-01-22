@@ -73,5 +73,30 @@ for(let i=0;i<myObject.cars.length;i++){
     for(let j=0;j<myObject.cars[i].models.length;j++){
         console.log(myObject.cars[i].models[j]);
     }
-
 }
+
+/*JS Array Search */
+//indexOf()
+const Z = [1,2,3,4,5,5,7,6,0,8];
+console.log(Z.indexOf(5));
+
+//lastIndexOf()
+console.log(Z.lastIndexOf(5));
+
+//includes()
+console.log(Z.includes(10));
+
+//find()
+console.log(Z.find(myFunction)) // we are passing function not calling function
+function myFunction(value){
+    return value > 5;
+}
+
+//findIndex()
+console.log(Z.findIndex(myFunction));
+
+//findLast()
+console.log(Z.findLast(myFunction));
+
+//findLastIndex()
+console.log(Z.findLastIndex(myFunction));
