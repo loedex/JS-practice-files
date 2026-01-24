@@ -100,3 +100,125 @@ console.log(Z.findLast(myFunction));
 
 //findLastIndex()
 console.log(Z.findLastIndex(myFunction));
+
+
+/*JS Array Sort */
+//Alphabetic Sort:
+//sort()
+let arr1 = ["Orange","Apple","Mango","Lemon","Kiwi"];
+console.log(arr1.sort());
+console.log(arr1); // the original array also has been changed 
+
+//reverse()
+console.log(arr1.reverse());
+console.log(arr1); // reverse() also modifies the original array.
+
+//toSorted()
+console.log(arr1.toSorted()); //toSorted is alternative way of sort() and it does not change the original array
+console.log(arr1); //original array will remain unchanged
+
+//toReversed()
+console.log(arr1.toReversed()); //toReversed() is an alternative way of reverse() which doesn't modify the original array
+console.log(arr1); //original array will remain unchnaged
+
+
+/*Sorting Object Arrays */
+const CARS = [{type:"Volvo",year:2016},{type:"Saab",year:2001},{type:"BMW",year:2019},{type:"Audi",year:2015}];
+console.log("Before Sorting: ");
+console.log(CARS);
+//Now let's sort by type string: Alphabetically A-Z
+CARS.sort( (a,b) => a.type.localeCompare(b.type));
+console.log("After Sorting: ");
+console.log(CARS);
+
+
+const CARS2 = [{type:"Volvo",year:2016},{type:"saab",year:2001},{type:"bMW",year:2019},{type:"Audi",year:2015}];
+//if data has mixed cases:
+console.log(CARS2.sort( (a,b) => a.type.toLowerCase().localeCompare(b.type.toLowerCase())));
+console.log(CARS2); //original array has been changed
+console.log(CARS2.reverse( (a,b) => a.type.toLowerCase().localeCompare(b.type.toLowerCase())));
+console.log(CARS2); //original array has been changed
+console.log(CARS2.toSorted( (a,b) => a.type.toLowerCase().localeCompare(b.type.toLowerCase())));
+console.log(CARS2); //original array remains unchanged
+
+//Now let's sort by year:
+console.log(CARS2.sort( (a,b) => a.year-b.year));
+//reverse sort by year: 
+console.log(CARS2.reverse( (a,b) => a.year-b.year));
+
+
+//sort numbers in array :
+const arr3 = [10,2,9,1,45,0,23,-1];
+console.log(arr3.sort( (a,b) => a-b));
+//reverse sort
+console.log(arr3.reverse( (a,b) => a-b));
+
+const arr4 = [1,2,10,34,90,32,88];
+console.log(Math.min.apply(null, arr4));
+console.log(Math.max.apply(null,arr4));
+
+/*JS Array Iteration Methods */
+//forEach()
+arr4.forEach(thisCallBackFunction);
+function thisCallBackFunction(value,index,ar){
+    console.log(value*=0);
+}
+console.log(arr4); //original array is not changed
+
+
+//map()
+const arrN = arr4.map(myFunction2);
+function myFunction2(value,index,array){
+    return value*2;
+}
+console.log(arrN);
+console.log(arr4); //The original array remains unchanged
+
+
+//flatMap()
+const arr5 = [1,2,3];
+const arrN2 = arr5.flatMap((value) => value*2);
+console.log(arrN2);
+console.log(arr5); //original remains unchanged
+
+//filter
+const arrr6 = [10,18,20,45,52,1];
+const newarr = arrr6.filter((x) =>  x>18);
+console.log(newarr);
+console.log(arrr6); //original is unchanged
+
+//every()
+//checks if all array elements pass a test:
+console.log(arrr6.every((x)=>x<100));
+
+//Array.from()
+//returns an array object from any iterable object:
+let s = "ABCDEF";
+console.log(Array.from(s));
+
+//Array.keys()
+//returns an Array iterator object with the keys of an array:
+const x = ["Apple","Mango","Banana","Kiwi","Lemon"];
+const key = x.keys();
+key.forEach(myFunctionx);
+function myFunctionx(value){
+    console.log(value);
+}
+
+//entries()
+//returns an array iterator with key/value pairs:
+const ent = x.entries();
+ent.forEach(fn);
+function fn(value,index){
+    console.log(index,value);
+}
+ent.forEach(fn2);
+function fn2(){
+    console.log(ent);
+}
+
+//with()
+// a safe to update elements in an array without altering the original array:
+const xx = [1,2,3,4,5];
+const newx = xx.with(2,10);
+console.log(newx);
