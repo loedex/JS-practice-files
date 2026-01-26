@@ -222,3 +222,13 @@ function fn2(){
 const xx = [1,2,3,4,5];
 const newx = xx.with(2,10);
 console.log(newx);
+
+//find()
+//returns the value of the first array element that passes a test function:
+const farray = [2,4,1,4,4,7,6,9,9];
+let fa = farray.find(myfn);
+function myfn(value,index,array){
+    return value > 5
+}
+console.log(fa);
+
