@@ -266,3 +266,36 @@ for(let i in h){
     console.log(h[i]);
 }
 
+
+//reduce()
+//runs a function on each array element to produce a single value:
+let arn = [1,2,3,4,5];
+let na = arn.reduce((n1,n2)=>{return n1+n2});
+console.log(na);
+
+
+//Pactice Set of Arrays 
+
+//Question : 1
+//Create an array of numbers and take the input from user to add number to array
+let Anum = [1,2,3,4,5,6,7,8,9];
+// let a = prompt("Enter Number : "); //Here a is a string so in next line we will convert this into integer
+// a = Number.parseInt(a);
+// Anum.push(a);
+// console.log(Anum);
+
+//Question : 2
+//Filter the numbers divisible by 10 from a given array: 
+let Bnum = [2,10,45,30,37,50];
+let bn = Bnum.filter((i)=>{return (i%10==0)});
+console.log("Numbers which are divisible by 10 are : ",bn);
+
+//Question : 3
+//Create an array of squares of given numbers
+let Cnum = Bnum.map((value)=>{return value**2});
+console.log(Cnum);
+
+//Question : 4
+//Use reduce() and calculate the product of numbers in an array
+let nn = Bnum.reduce((a,b)=>{return a*b});
+console.log(nn);
