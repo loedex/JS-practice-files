@@ -232,3 +232,37 @@ function myfn(value,index,array){
 }
 console.log(fa);
 
+//splice()
+//adds new items to an array and returns an array with the deleted items
+let fru = [1,2,3,4,5,6,7,8,9];
+// console.log(fru.length);
+// console.log(fru.splice(2,3,50,60,70,80,90)); //returns an array with the deleted items
+// console.log(fru); //original array has been modified
+// console.log(fru.length);
+
+//slice()
+//slices out a piece of array into a new array. It does not modify the original array
+let nw = fru.slice(2);// this will print from 2 index to end bcause end index is not specified.
+console.log(nw);
+console.log(fru); //original array remains unchanged
+nw = fru.slice(2,5); //end index is exclusive
+console.log(nw);
+
+//for-of loop on Arrays:
+//It works like a classic for loop
+let h = [1,2,3,4,5,6,7,8];
+for(let i of h){
+    console.log(i);
+}
+//for-in loop:
+//It displays the indexes not values
+console.log("for-in Loop ");
+for(let i in h){
+    console.log(i);
+}
+//But if we want to display the values using for-in loop:
+console.log("Values using for-in Loop");
+for(let i in h){
+    console.log(h[i]);
+}
+
