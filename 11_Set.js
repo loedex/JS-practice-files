@@ -59,6 +59,7 @@ for(let k of s){
     console.log(k);
 }
 
+
 console.log("Intersection")
 //intersection()
 //returns the intersection of two sets in a new set
@@ -66,3 +67,13 @@ const ints = s1.intersection(s2);
 for(let k of ints){
     console.log(k);
 }
+
+//difference()
+//returns the difference between two sets
+let ds1 = [1,2,3,4,5,6,7,8,9];
+let ds2 = [1,3,5,7,9];
+let ds = ds1.difference(ds2);
+for(let d of ds){
+    console.log(d);
+}
+
