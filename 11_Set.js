@@ -70,10 +70,14 @@ for(let k of ints){
 
 //difference()
 //returns the difference between two sets
-let ds1 = [1,2,3,4,5,6,7,8,9];
-let ds2 = [1,3,5,7,9];
-let ds = ds1.difference(ds2);
-for(let d of ds){
-    console.log(d);
-}
+let ds11 = [1,2,3,4,5,6,7,8,9];
+let ds22 = [1,3,5,7,9];
+// let ds = ds1.difference(ds2);
+// for(let d of ds){
+//     console.log(d);
+// }
 
+
+//symmetricDifference()
+//returns a new set containing elements which are in this set or in the argument set but not in both
+console.log(ds11.symmetricDifference(ds22));
