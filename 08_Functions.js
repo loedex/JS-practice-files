@@ -89,3 +89,24 @@ const notificationSystem = (message, ...receivers) => {
     }
 }
 notificationSystem("Hi! Nice to meet you.","Husnain Ahmad","Waleed Ahmed","Anas Bilal");
+
+
+
+
+/*Callback Functions */
+const prepareOrder = (foodItem,callback)=>{
+    console.log("Kitchen Received Item : "+foodItem);
+    callback();
+};
+
+//Different callbacks for different for different situations
+const serveToTable = ()=>{
+    console.log("Serving to you, Enjoy.");
+};
+const packForDelivery = ()=>{
+    console.log("Packing for Delivery.");
+};
+
+//same prepareOrder() function bahaves differently based on which callback we pass:
+prepareOrder("Pizza",serveToTable);
+prepareOrder("Burger",packForDelivery);
