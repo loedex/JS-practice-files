@@ -55,6 +55,8 @@ let sum = (...params)=>{
 console.log("Addition = ",sum(5,5,8,10,4,8,13,43,90,12,0,23,40,50));
 
 
+
+/*Use of Rest Parameter */
 const printOrder = (customerName, ...ITEMS) => {
     console.log("Customer Name : "+ customerName);
     for(let i=0; i<ITEMS.length; i++){
@@ -62,3 +64,16 @@ const printOrder = (customerName, ...ITEMS) => {
     }
 };
 printOrder("Husnain Ahmad","Piza","Burger","Sandwich","Cold Drink");
+
+
+/* Calculating Student Average */
+const calculateAverage = (studentName, ...studentMarks) =>{
+    let marksAVG = 0;
+    let marksNo = studentMarks.length;
+    console.log("Student Name   :   "+studentName);
+    for(let i=0; i<studentMarks.length; i++){
+        marksAVG += studentMarks[i]; 
+    }
+    console.log("Average Marks :  "+marksAVG/marksNo);
+}
+calculateAverage("Husnain Ahmad",100,100,90,85,87);
