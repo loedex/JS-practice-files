@@ -110,3 +110,17 @@ const packForDelivery = ()=>{
 //same prepareOrder() function bahaves differently based on which callback we pass:
 prepareOrder("Pizza",serveToTable);
 prepareOrder("Burger",packForDelivery);
+
+
+
+/*Inline Callbacks */
+const prepareOrder2 = (itemFood,callback)=>{
+    console.log("Kitchen Received Item : "+itemFood);
+    callback();
+}
+prepareOrder("Pizza",()=>{
+    console.log("Serving to you, Enjoy");
+});
+prepareOrder("Burger",()=>{
+    console.log("Packing for Delivery");
+});
