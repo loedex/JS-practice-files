@@ -299,3 +299,13 @@ console.log(Cnum);
 //Use reduce() and calculate the product of numbers in an array
 let nn = Bnum.reduce((a,b)=>{return a*b});
 console.log(nn);
+
+
+/*Skip out of stock items*/
+console.log("Items in Stock")
+const Items = [{Name:"Apple",code:"101", inStock:true},{Name:"Mango",code:"102",inStock:false},{Name:"Banana",code:"103",inStock:true},{Name:"Watermelon",code:"104",inStock:false}];
+for(let i=0; i<Items.length; i++){
+    if(Items[i].inStock){
+        console.log("Detail : ",Items[i].code);
+    }
+}
