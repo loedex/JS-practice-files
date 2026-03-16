@@ -77,3 +77,15 @@ const calculateAverage = (studentName, ...studentMarks) =>{
     console.log("Average Marks :  "+marksAVG/marksNo);
 }
 calculateAverage("Husnain Ahmad",100,100,90,85,87);
+
+
+/*Building a Notification System */
+const notificationSystem = (message, ...receivers) => {
+    console.log("Message is :   "+message);
+    console.log("Number of Receivers :  ",receivers.length);
+    for(let i=0; i<receivers.length; i++){
+        console.log((i+1)+"  Receiver :: ",receivers[i]);
+
+    }
+}
+notificationSystem("Hi! Nice to meet you.","Husnain Ahmad","Waleed Ahmed","Anas Bilal");
