@@ -53,3 +53,12 @@ let sum = (...params)=>{
     return Sum;
 }
 console.log("Addition = ",sum(5,5,8,10,4,8,13,43,90,12,0,23,40,50));
+
+
+const printOrder = (customerName, ...ITEMS) => {
+    console.log("Customer Name : "+ customerName);
+    for(let i=0; i<ITEMS.length; i++){
+        console.log("  "+(i+1)+"   "+ITEMS[i]);
+    }
+};
+printOrder("Husnain Ahmad","Piza","Burger","Sandwich","Cold Drink");
