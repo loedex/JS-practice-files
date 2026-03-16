@@ -124,3 +124,31 @@ prepareOrder("Pizza",()=>{
 prepareOrder("Burger",()=>{
     console.log("Packing for Delivery");
 });
+
+
+/*Success and Error Callbacks */
+const loginUser = (userName,password,onError,onSuccess)=>{
+    console.log("Checking Credentials...");
+    if((userName === "") || (password === "")){
+        onError(userName,"Username or Password is invalid");
+        return;
+    }
+    else if(password.length < 8){
+        onError(userName,"Username or Password is invalid");
+        return;
+    }
+    else{
+        onSuccess(userName,"Start using the platform");
+        return;
+    }
+};
+const onError = (nm,msg)=>{
+    console.log("Sorry "+nm);
+    console.log(msg);
+};
+const onSuccess = (nm,msg)=>{
+    console.log("Congratulations! "+nm);
+    console.log(msg);
+};
+loginUser("HusnainAhmad","1001",onError,onSuccess);
+loginUser("Husnain","8989898989",onError,onSuccess);
