@@ -31,3 +31,17 @@ simulateButtonClick("View",deleteAccount);
 simulateButtonClick("Logout",()=>{
     console.log("loging you OUT");
 });
+
+
+//Higher Order Function
+
+// This function returns an another function
+const createGreeting = (greeting) => {
+    return (name) => {
+        console.log(greeting + "  " + name);
+    };
+};
+
+// createGreeting returns a function , store it in a variable
+const sayHello = createGreeting("Hello, Welcome!");
+sayHello("Husnain Ahmad");
