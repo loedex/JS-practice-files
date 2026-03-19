@@ -81,5 +81,12 @@ const a1 = [6,7,8,9,10];
 const a2 = a1.map((value,index)=>{
      console.log("Multiplying "+value+" at index "+index+ " with "+2);
      return value * 2;
-})
+});
 console.log(a2);
+
+//Add Currency symbol to all prices  using .map()
+const p1 = [100,200,300,500];
+const p2 = p1.map((value)=>{
+    return value+"USD";
+});
+console.log(p2);
