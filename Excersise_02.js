@@ -45,3 +45,22 @@ const createGreeting = (greeting) => {
 // createGreeting returns a function , store it in a variable
 const sayHello = createGreeting("Hello, Welcome!");
 sayHello("Husnain Ahmad");
+
+
+//Real Life HOF - Discount Calculator
+const discountCalculator = (discountPricent) => {
+    return (originalPrice) => {
+        const saving = (originalPrice * discountPricent)/100;
+        const finalPrice = originalPrice-saving;
+        console.log("Original Price :  " + originalPrice);
+        console.log("Your Saving : " + saving);
+        console.log("Final Price : " + finalPrice);
+    };
+};
+
+const student = discountCalculator(20);
+const teacher = discountCalculator(10);
+
+student(500);
+student(700);
+teacher(1000);
