@@ -64,3 +64,22 @@ const teacher = discountCalculator(10);
 student(500);
 student(700);
 teacher(1000);
+
+//Built-in HOF : .map()
+const arr1 = [1,2,3,4,5];
+//map takes one element from arr1 and calls the callback to passed function
+const arr2 = arr1.map(myFunction);
+function myFunction(value,index){
+    console.log("Multiplying "+value+" at index "+index+ " with "+2);
+    return value*2;
+}
+console.log(arr2);
+
+//We can also write arrow function here 
+
+const a1 = [6,7,8,9,10];
+const a2 = a1.map((value,index)=>{
+     console.log("Multiplying "+value+" at index "+index+ " with "+2);
+     return value * 2;
+})
+console.log(a2);
