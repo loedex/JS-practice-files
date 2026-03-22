@@ -219,3 +219,12 @@ users
 users
     .filter((u)=> u.role==="User")
     .map((u)=> console.log(u.name+" is an User"));
+
+
+    //Understanding Block Scope
+const N = 20;
+let st = "Pending";
+if(N>10){
+    st = "Updated";
+}
+console.log(st);
