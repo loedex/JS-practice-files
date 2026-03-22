@@ -162,3 +162,24 @@ console.log(productCards);
 
 const N1 = [1,2,3,4,5];
 N1.map((val)=> console.log(val*10));
+
+
+//.filter()
+//keeps the item that pass the test, removes which don't.
+
+//filter out the numbers which are less than 50.
+const num = [10,70,30,90,40,100,20,60];
+const numN = num.filter((n)=> n>=50);
+console.log("Original Array : "+num);
+console.log("New Filtered Array : "+numN);
+
+const products2 = [
+    {name: "Laptop", inStock:true},
+    {name: "Mobile", inStock:true},
+    {name: "Headphone", inStock:false},
+    {name: "Headset",inStock:true},
+    {name: "Bike",inStock:false}
+];
+//Keep only items which are available in stock
+const pN = products2.filter((p)=> p.inStock);
+console.log(pN);
