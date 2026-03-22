@@ -144,3 +144,21 @@ const nm = ['husnain ahmad','waleed ahmed','zain arshad','muhammad shahzaib arsh
 const nmN = nm.map((N)=>N.toUpperCase());
 console.log("Original Name List : "+nm);
 console.log("Transformed Name List : "+nmN);
+
+
+// .map() with Objects
+//The React Use Case
+const products = [
+    {id: 1 ,name:"Laptop",price:90000},
+    {id: 2, name:"Mobile",price:70000},
+    {id: 3, name:"Bike",price: 1000000},
+    {id: 4, name:"Car",price: 8000000}
+];
+//Tranform each product object into a display string.
+const productCards = products.map((value)=> value.id+": "+value.name+" : &  "+value.price);
+console.log(productCards);
+
+
+
+const N1 = [1,2,3,4,5];
+N1.map((val)=> console.log(val*10));
