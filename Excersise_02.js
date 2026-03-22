@@ -90,3 +90,48 @@ const p2 = p1.map((value)=>{
     return value+"USD";
 });
 console.log(p2);
+
+
+
+
+/*Button Handlers
+Inline Callback Version */
+const simulateButtonClick2 = (label,onClickFn) => {
+    console.log(label + " was "+" pressed.");
+    onClickFn();
+}
+simulateButtonClick2("SignUp",()=>{
+    console.log("Wait for Registration form to SignUp");
+});
+simulateButtonClick2("Delete",()=>{
+    console.log("Deleting");
+});
+simulateButtonClick2("Log Out",()=>{
+    console.log("Ok Bye");
+});
+
+// So same simulateButtonClick2() function but different behavior, different callbacks on each action. That's the beauty of Callback
+
+
+
+
+// Input a integer and pick every integer and multiply it by 2 and return result values as array. 
+//Old Way : without .map()
+const ar = [2,3,4,5,6];
+const arN=[];
+for(let i=0; i<ar.length; i++){
+arN.push(ar[i]*2);
+}
+console.log("New Array");
+console.log("Newly Created Array"+arN);
+console.log("Original array remains unchanged : "+arN);
+
+//New Way : using .map()
+const arN2 = ar.map((v)=>{
+    return v*3;
+});
+console.log("New Array using .map()");
+console.log("Newly Created Array : "+arN2);
+
+//The original array remains unchanged
+console.log("Original array remains unchanged : "+ar);
