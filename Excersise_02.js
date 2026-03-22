@@ -183,3 +183,21 @@ const products2 = [
 //Keep only items which are available in stock
 const pN = products2.filter((p)=> p.inStock);
 console.log(pN);
+
+
+// .filter() and .map() together
+const orderProducts = [
+    {id: 1, name: "Laptop",price:90000,status:"Delivered"},
+    {id: 2, name: "Mobile",price: 50000, status:"Delivered"},
+    {id:3, name:"Bike",price: 300000, status:"Pending"},
+    {id: 4, name:"Headset",price:5000,status:"Delivered"},
+    {id: 5, name:"Car",price:9000000, status:"Pending"}
+];
+
+const deliveredReceipts = orderProducts
+    .filter((p)=> p.status === "Delivered")
+    .map((p)=>{return p.id+"has been delivered";});
+
+
+deliveredReceipts.map((p)=> console.log(p));
+console.log(deliveredReceipts);
