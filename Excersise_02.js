@@ -201,3 +201,21 @@ const deliveredReceipts = orderProducts
 
 deliveredReceipts.map((p)=> console.log(p));
 console.log(deliveredReceipts);
+
+
+//Find the Admins from the users
+const users = [
+    {name:"Husnain Ahmad", role:"Admin"},
+    {name:"Umar Asgar", role:"User"},
+    {name:"Anas Bilal",role:"User"},
+    {name:"Waledd Ahmed",role:"Admin"}
+];
+users 
+    .filter((u)=> u.role==="Admin")
+    .map((u)=> console.log(u.name+" is an Admin."));
+
+
+//Now find users whose role is "User"
+users
+    .filter((u)=> u.role==="User")
+    .map((u)=> console.log(u.name+" is an User"));
