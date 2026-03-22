@@ -315,3 +315,4 @@ for(let i=0; i<Items.length; i++){
 //Create an array called myFavouriteFoods with at least 5 of your favourite foods as strings. Print the whole array with console.log and also print how many items are in it using .length!
 const myFavouriteFoods = ["Mango","WaterMelon","Apple","Orange","Banana"];
 myFavouriteFoods.map((v,i)=> console.log(i+": "+v));
+console.log("Lenght of array : "+myFavouriteFoods.length);
