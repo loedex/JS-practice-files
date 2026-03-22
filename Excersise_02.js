@@ -127,11 +127,20 @@ console.log("Newly Created Array"+arN);
 console.log("Original array remains unchanged : "+arN);
 
 //New Way : using .map()
-const arN2 = ar.map((v)=>{
-    return v*3;
-});
+const arN2 = ar.map((v)=>v*3);
 console.log("New Array using .map()");
 console.log("Newly Created Array : "+arN2);
 
 //The original array remains unchanged
 console.log("Original array remains unchanged : "+ar);
+
+//.toUpperCase()
+console.log("husnain".toUpperCase());
+
+//Take a list of names in an array and transform all names into Uppercase and return the results in form of array
+//Use .map()
+
+const nm = ['husnain ahmad','waleed ahmed','zain arshad','muhammad shahzaib arshad'];
+const nmN = nm.map((N)=>N.toUpperCase());
+console.log("Original Name List : "+nm);
+console.log("Transformed Name List : "+nmN);
