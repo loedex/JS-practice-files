@@ -316,3 +316,26 @@ for(let i=0; i<Items.length; i++){
 const myFavouriteFoods = ["Mango","WaterMelon","Apple","Orange","Banana"];
 myFavouriteFoods.map((v,i)=> console.log(i+": "+v));
 console.log("Lenght of array : "+myFavouriteFoods.length);
+
+
+
+//Transforming Objects in an Array
+// INPUT — array of product objects:
+// Transform each product — add a discounted price field!
+const prod = [
+    {id:1, name:"Laptop",price:90000},
+    {id:2, name:"Mobile",price:50000},
+    {id:3,name:"Headset",price:10000}
+];
+const prodN = prod.map((i)=>{
+    return {
+        id:i.id,
+        name:i.name,
+        originalPrice:i.price,
+        discountedPrice: Math.round(i.price*0.9)
+    };
+});
+console.log("Original Array");
+prod.map((v)=> console.log(v));
+console.log("New Array");
+prodN.map((v)=> console.log(v));
