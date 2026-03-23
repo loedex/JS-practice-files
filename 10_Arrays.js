@@ -346,3 +346,7 @@ const studentsN = students.map((v,i)=>{
     return (i+1)+": "+v;
 });
 console.log(studentsN);
+
+// from above array prod , keep only affordable items , under 60000 
+const affordableItems = prod.filter((v)=> v.price<60000);
+console.log(affordableItems);
