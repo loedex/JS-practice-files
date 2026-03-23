@@ -339,3 +339,10 @@ console.log("Original Array");
 prod.map((v)=> console.log(v));
 console.log("New Array");
 prodN.map((v)=> console.log(v));
+
+
+const students = ["Husnain Ahmad","Waleed Ahmed","Zain Arshad","Muhammad Shahzaib Arshad"];
+const studentsN = students.map((v,i)=>{
+    return (i+1)+": "+v;
+});
+console.log(studentsN);
