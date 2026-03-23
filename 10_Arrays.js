@@ -350,3 +350,15 @@ console.log(studentsN);
 // from above array prod , keep only affordable items , under 60000 
 const affordableItems = prod.filter((v)=> v.price<60000);
 console.log(affordableItems);
+
+const courses = [
+    "JavaScript Basics ",
+    "React Fundamentals ",
+    "Advanced JavaScript ",
+    "Node.js Backend ",
+    "JavaScript and TypeScript ",
+    "CSS and Design React ",
+    "React and Redux "
+];
+const searchCourses = courses.filter((searchTerm)=>searchTerm.includes("React"));
+console.log(searchCourses);
