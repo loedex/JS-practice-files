@@ -404,3 +404,8 @@ const totalPrice = cartItems.reduce((accumulator,currentItem)=>{
     return accumulator+itemCost;
 },0);
 console.log(totalPrice);
+
+const examScores = [85, 92, 78, 95, 88, 72];
+//Now add all scores together
+const totalScore = examScores.reduce((total,score)=> total+score);
+console.log(totalScore);
