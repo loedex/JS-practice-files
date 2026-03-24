@@ -382,3 +382,25 @@ emailList.forEach((users)=>{
     console.log("Sending Email to : "+users.email);
     console.log("Welcome : "+users.name);
 });
+
+
+const num = [1,2,3,4,5,6,7];
+const result = num.reduce((accumulator,currentItem)=>{
+    return 2*currentItem;
+},1);
+console.log(result);
+
+
+
+const cartItems = [
+    { name: "Laptop 💻",     price: 75000, qty: 1 },
+    { name: "Mouse 🖱️",      price: 799,   qty: 2 },
+    { name: "Keyboard ⌨️",   price: 1299,  qty: 1 },
+    { name: "USB Hub 🔌",    price: 599,   qty: 3 }
+];
+//Calculate Total price
+const totalPrice = cartItems.reduce((accumulator,currentItem)=>{
+    const itemCost = currentItem.price*currentItem.qty;
+    return accumulator+itemCost;
+},0);
+console.log(totalPrice);
