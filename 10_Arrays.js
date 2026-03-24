@@ -368,4 +368,4 @@ console.log(searchCourses);
 //.forEach()
 //Input an array and then print all items using forEach()
 const veg = ["Apple","Banana","Watermelon","Orange","Mango"];
-veg.forEach((v)=> console.log(v));
+veg.forEach((v,i)=> console.log((i+1)+" : "+v));
