@@ -369,3 +369,16 @@ console.log(searchCourses);
 //Input an array and then print all items using forEach()
 const veg = ["Apple","Banana","Watermelon","Orange","Mango"];
 veg.forEach((v,i)=> console.log((i+1)+" : "+v));
+
+
+
+const emailList = [
+    { name: "Alice",   email: "alice@gmail.com"   },
+    { name: "Bob",     email: "bob@gmail.com"     },
+    { name: "Charlie", email: "charlie@gmail.com" }
+];
+//Now send a welcome email to every person
+emailList.forEach((users)=>{
+    console.log("Sending Email to : "+users.email);
+    console.log("Welcome : "+users.name);
+});
