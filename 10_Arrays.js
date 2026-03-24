@@ -422,3 +422,22 @@ const highestScore = scores.reduce((highest,current)=>{
     }
 },0);
 console.log(highestScore);
+
+
+
+const orders = [
+    { id: 1, status: "delivered" },
+    { id: 2, status: "pending"   },
+    { id: 3, status: "delivered" },
+    { id: 4, status: "pending"   },
+    { id: 5, status: "delivered" },
+    { id: 6, status: "cancelled" }
+];
+//Now Count delivered orders
+const deliveredOrders = orders.reduce((s,c)=>{
+    if(c.status === "delivered"){
+        return ++s;
+    }
+    return s;
+},0);
+console.log(deliveredOrders);
