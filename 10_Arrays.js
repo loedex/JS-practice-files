@@ -362,3 +362,10 @@ const courses = [
 ];
 const searchCourses = courses.filter((searchTerm)=>searchTerm.includes("React"));
 console.log(searchCourses);
+
+
+
+//.forEach()
+//Input an array and then print all items using forEach()
+const veg = ["Apple","Banana","Watermelon","Orange","Mango"];
+veg.forEach((v)=> console.log(v));
