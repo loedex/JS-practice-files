@@ -409,3 +409,16 @@ const examScores = [85, 92, 78, 95, 88, 72];
 //Now add all scores together
 const totalScore = examScores.reduce((total,score)=> total+score);
 console.log(totalScore);
+
+
+
+const scores = [72, 95, 88, 41, 100, 63];
+//Find the highest score using .reduce()
+const highestScore = scores.reduce((highest,current)=>{
+    if(current>highest){
+        return current;
+    }else{
+        return highest;
+    }
+},0);
+console.log(highestScore);
