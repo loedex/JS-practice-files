@@ -441,3 +441,10 @@ const deliveredOrders = orders.reduce((s,c)=>{
     return s;
 },0);
 console.log(deliveredOrders);
+
+
+
+// Write an arrow function that takes an array of numbers and returns only the even ones using .filter()
+const numAr = [2,3,4,5,6,7,8,9,10,12,15];
+const evenNumbers = numAr.filter((v)=>(v%2)===0);
+console.log(evenNumbers);
