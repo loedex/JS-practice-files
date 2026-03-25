@@ -50,3 +50,20 @@ delete student.marks;
 console.log(student);
 student.grade = "A+";
 console.log(student);
+
+
+//Nested Object
+//User Profile
+const profile = {
+    name:"Husnain Ahmad",
+    age:19,
+    address: {
+        country : "Pakistan",
+        province: "Punjab",
+        city : "Islamabad"
+    },
+    email:"loedex7@gmail.com"
+};
+console.log(profile);
+console.log(profile.address);
+console.log(profile.address.city);
