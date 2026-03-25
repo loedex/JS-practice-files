@@ -39,31 +39,48 @@
 
 
 
-let student = {
-  name: "Ali",
-  marks: 80
-};
-console.log(student);
-student.grade = "A";
-console.log(student);
-delete student.marks;
-console.log(student);
-student.grade = "A+";
-console.log(student);
+// let student = {
+//   name: "Ali",
+//   marks: 80
+// };
+// console.log(student);
+// student.grade = "A";
+// console.log(student);
+// delete student.marks;
+// console.log(student);
+// student.grade = "A+";
+// console.log(student);
 
 
 //Nested Object
 //User Profile
-const profile = {
-    name:"Husnain Ahmad",
-    age:19,
-    address: {
-        country : "Pakistan",
-        province: "Punjab",
-        city : "Islamabad"
-    },
-    email:"loedex7@gmail.com"
+// const profile = {
+//     name:"Husnain Ahmad",
+//     age:19,
+//     address: {
+//         country : "Pakistan",
+//         province: "Punjab",
+//         city : "Islamabad"
+//     },
+//     email:"loedex7@gmail.com"
+// };
+// console.log(profile);
+// console.log(profile.address);
+// console.log(profile.address.city);
+
+let user = {
+  name: "Husnain",
+  age: 21,
+  city: "Faisalabad"
 };
-console.log(profile);
-console.log(profile.address);
-console.log(profile.address.city);
+// Object.entries(user).forEach(([item,value])=>{
+//     console.log(item + " : "+value);
+// });
+Object.entries(user).map(([item,value])=>console.log(item+" : "+value));
+// const ar = Object.keys(user);
+// console.log(ar);
+// ar.forEach(v=>console.log(v));
+// Object.keys(user).forEach((v,i)=>console.log((i+1)+" : "+v));
+// for(let i of Object.keys(user)){
+//     console.log(i);
+// }
