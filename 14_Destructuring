@@ -1,0 +1,25 @@
+//Modern Es6+ Synatx
+
+//Destructuring (used in React)
+//Array Destructuring
+
+
+// Without Array Destructuring - Old Way
+const arr = [1,2,3,4,5];
+const one = arr[0];
+const two = arr[1];
+const three = arr[2];
+
+console.log(one);
+console.log(two);
+console.log(three);
+
+
+//With Array Destructuring - ES6+ Syntax - Modern Way
+const array = [11,12,13,14,15];
+const [first,second,third,fourth,fifth] = array;
+console.log(first);
+console.log(second);
+console.log(third);
+console.log(fourth);
+console.log(fifth);
