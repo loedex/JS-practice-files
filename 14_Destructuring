@@ -32,3 +32,12 @@ const [R,G,B] =color;
 console.log(R);
 console.log(G);
 console.log(B);
+
+
+
+//SKip value
+// Use a comma with no variable name to SKIP a position
+const A = [1,2,3,4,5];
+const [ , , , l2,l]=A;
+console.log(l2);
+console.log(l);
