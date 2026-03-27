@@ -23,3 +23,12 @@ console.log(second);
 console.log(third);
 console.log(fourth);
 console.log(fifth);
+
+
+
+//RGB Color Example
+const color = [122,90,255];
+const [R,G,B] =color;
+console.log(R);
+console.log(G);
+console.log(B);
