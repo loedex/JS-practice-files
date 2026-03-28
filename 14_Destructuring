@@ -111,3 +111,14 @@ console.log(User2Name);
 console.log(User2Age);
 console.log(User2Country);
 console.log(city);
+
+
+
+//Default Values in Array Destructuring
+const UserArr = [1,2,3];
+const [A1,A2,A3,A4=4,A5=5] = UserArr;
+console.log(A1);
+console.log(A2);
+console.log(A3);
+console.log(A4);
+console.log(A5);
