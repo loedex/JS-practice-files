@@ -1,0 +1,15 @@
+//Spread With Arrays
+
+//Without Spread 
+const original = [1,2,3,4,5];
+const badCopy = original;
+badCopy.push(10);
+console.log(original);
+console.log(badCopy);
+
+//With Spread
+const original2 = [11,12,13,14,15];
+const goodCopy = [...original2];
+goodCopy.push(50);
+console.log(original2);
+console.log(goodCopy);
