@@ -98,3 +98,16 @@ const {name:UserName,email:UserEmail} = user2;
 console.log(UserName);
 console.log(UserEmail);
 
+
+
+//Default Values in Object Destructuring
+const User2 = {
+    name:"Anas",
+    age:10,
+    country:"Pakistan"
+};
+const {name:User2Name, age:User2Age,country:User2Country="England",city="Faisalabad"} = User2;
+console.log(User2Name);
+console.log(User2Age);
+console.log(User2Country);
+console.log(city);
