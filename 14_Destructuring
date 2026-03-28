@@ -83,3 +83,18 @@ const PROFILE = {
 const {NAME,EMAIL} = PROFILE;
 console.log(NAME);
 console.log(EMAIL);
+
+
+
+//Renaming while Destructuring
+const user2 = {
+    name:"Ali",
+    age:19,
+    email:"husnain@gmail.com"
+};
+// const {name,age,email} = user2; //shows error because the variables name,age and email has alreday been taken.
+//So the solution is "Renaming while destructuring"
+const {name:UserName,email:UserEmail} = user2;
+console.log(UserName);
+console.log(UserEmail);
+
