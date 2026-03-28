@@ -1,5 +1,6 @@
 //Modern Es6+ Synatx
 
+
 //Destructuring (used in React)
 //Array Destructuring
 
@@ -41,3 +42,44 @@ const A = [1,2,3,4,5];
 const [ , , , l2,l]=A;
 console.log(l2);
 console.log(l);
+
+
+
+//Object Destructuring
+//Old Way 
+const user = {
+    name:"Ali",
+    age:19,
+    email:"..@gmail.com"
+};
+const Name = user.name;
+const Age = user.age;
+const Email = user.email;
+
+console.log(Name);
+console.log(Age);
+console.log(Email);
+
+//Modern Way
+const USER = {
+    name:"Husnain",
+    age:18,
+    email:".@gmail.com"
+};
+const {name,age,email} = USER;
+//the variables names inside {} must match the key namesi the object Exactly. Otherwise it will show "undefined"
+
+console.log(name);
+console.log(age);
+console.log(email);
+
+
+//We can pickup and chose only what we want
+const PROFILE = {
+    NAME : "Husnain Ahmad",
+    AGE:20,
+    EMAIL:"demo@gmail.com"
+};
+const {NAME,EMAIL} = PROFILE;
+console.log(NAME);
+console.log(EMAIL);
