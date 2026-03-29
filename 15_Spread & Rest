@@ -21,3 +21,99 @@ const arr1 = [1,2,3,4,5];
 const arr2 = [6,7,8,9,10];
 const result = [...arr1, ...arr2 , "End"];
 console.log(result);
+
+
+
+//Spread With Objects
+
+//copying an Object
+const user = {
+    name:"Alice",
+    age:25
+};
+const newUser = {...user};
+//Adding a new property without changing the original
+newUser.country = "Paris";
+console.log(newUser);
+console.log(user);
+
+//Merge Two Objects
+const existingProfile = {
+    name:"Ali",
+    age:19,
+    city:"Paris"
+};
+const updatedProfile = {
+    age:21,
+    city:"Spain",
+    email:"...@gmail.com"
+};
+const newProfile = {...existingProfile, ...updatedProfile};
+console.log(newProfile);
+//Object Destructuring
+const {name:NewName,city:NewCity,email:NewEmail,age:NewAge,phoneNumber="12345"} = newProfile;
+console.log(NewName);
+console.log(NewCity);
+console.log(NewEmail);
+console.log(NewAge);
+console.log(phoneNumber);
+
+
+
+//Shallow Copy
+const user3 = {
+    name:"Alice",
+    age:21,
+    address:{
+        city:"NewYork",
+        country:"USA"
+    },
+    email:"abc@gmail.com"
+};
+// const copyUser3 = {...user3};
+//changing a top level propert will not affect the original
+// copyUser3.name="Mr. Alice";
+// console.log(copyUser3);
+// console.log(user3);
+//Changing a nested property will also affect the original one.
+// copyUser3.address.city="Sydne";
+// console.log(copyUser3);
+// console.log(user3);
+
+
+//So here is the solution.
+//To safely update a nested property
+const copyUser3 = {...user3, address:{...user3.address,city:"Sydne"}};
+console.log(copyUser3);
+// copyUser3.address.city="Sydne";
+console.log(copyUser3);
+console.log(user3);
+
+
+
+
+Exercise : 1
+const product = { name: "Laptop", price: 999, inStock: true };
+// Create a new object discountedProduct where the price is 799 but everything else stays the same. Log both to confirm product is unchanged.
+const discountedProduct = {...product,price:799};
+console.log(product);
+console.log(discountedProduct);
+
+
+
+
+//Exercise 2
+const defaultSettings = { theme: "light", fontSize: 14, language: "en" };
+const userSettings = { theme: "dark", fontSize: 18 };
+// Merge them into finalSettings so that user preferences win, but language is kept from defaults.
+const finalSettings = {...defaultSettings,userSettings};
+console.log(finalSettings);
+
+
+
+//Exercide 3
+// Add isLoggedIn without touching the original
+const person = { name: "Alice", age: 25 };
+const loggedPerson = {...person,isLoggedIn:true};
+console.log(person);
+console.log(loggedPerson);
