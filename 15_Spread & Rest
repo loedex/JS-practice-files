@@ -138,3 +138,24 @@ console.log(one);
 console.log(two);
 console.log(three);
 console.log(remain);
+
+
+
+
+// Exercise 1: Write a function multiplyAll that takes any number of arguments and returns their product (all multiplied together). Test it with multiplyAll(2, 3, 4) → should give 24.
+function multiplyAll(...nums){
+    let f = 1;
+    nums.forEach((num)=>f=f*num);
+    return f;
+}
+console.log(multiplyAll(2,3,4));
+
+
+
+// Exercise 2 (challenge): Write a function makesentence(connector, ...words) that joins all the words with the connector between them. So makesentence(" and ", "cats", "dogs", "birds") should log "cats and dogs and birds".
+function makesentence(connector, ...words){
+    let str = words.join(" "+connector+" ");
+    console.log(str);
+    return str;
+}
+console.log(makesentence("and","cats","dogs","birds"));
