@@ -1,0 +1,6 @@
+function Sum(...numbers){
+    let sum = 0;
+    numbers.forEach((num)=> sum+=num);
+    console.log("Sum : "+sum);
+}
+export default Sum;
