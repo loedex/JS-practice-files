@@ -1,0 +1,23 @@
+let firstName = "Maria";
+let lastName  = "Garcia";
+let age       = 28;
+
+const greeting = `Hello Welcome ${firstName} ${lastName} with age ${age}`;
+console.log(greeting);
+
+
+
+//Function Calls inside ${}
+function getDiscount(price) {
+  return (price * 0.10).toFixed(1); // 10% discount
+}
+const item = "Laptop";
+const price = 80;
+console.log(`${item} is on sale. Your Discount is ${getDiscount(price)}`);
+
+
+//Ternary Operator inside ${}
+let isLoggedIn = false;
+let username   = "Alex";
+let message = `Welcome ${isLoggedIn? username:"Guest"}`;
+console.log(message);
