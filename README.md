@@ -10,6 +10,14 @@ Every file represents a specific topic that I am learning step by step — from 
 - Conditional Structures  
 - Loops  
 - Functions  
+- Strings
+- Set
+- Map
+- Math
+- Destructuring
+- Spread and Rest
+- Template Literals
+- Modules (import & export)
 - (More topics coming soon)
 
 I am using this repository to practice JavaScript and Git commands together. 
