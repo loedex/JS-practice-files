@@ -152,3 +152,27 @@ const onSuccess = (nm,msg)=>{
 };
 loginUser("HusnainAhmad","1001",onError,onSuccess);
 loginUser("Husnain","8989898989",onError,onSuccess);
+
+
+
+//Callback Functions
+//A function passed as argument -- That's a callback
+const sayWelcome = ()=>{
+    console.log("Welcome! Registeration Complete");
+    console.log("Enjoy using app");
+}
+const registerUser = (name,callback)=>{
+    console.log("Hi "+name);
+    callback();
+}
+registerUser("Husnain Ahmad",sayWelcome);
+
+//Inline Callback
+const register = (name,callback)=>{
+    console.log("Hi "+name);
+    callback();
+};
+register("M.Husnain Ahmad",()=>{
+     console.log("Welcome! Registeration Complete");
+     console.log("Enjoy using app..");
+});
