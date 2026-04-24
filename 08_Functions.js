@@ -176,3 +176,17 @@ register("M.Husnain Ahmad",()=>{
      console.log("Welcome! Registeration Complete");
      console.log("Enjoy using app..");
 });
+
+
+//Higher Order Function
+const createGreeter = (word)=>{
+    return (name)=>{
+        console.log(word+" "+name);
+    };
+};
+let greet = createGreeter("Hi! Welcome...");
+greet("Husnain Aadi");
+//This alows us to create factory functions without rewriting code. We can use the same logic to create different types of greetings.
+//We can pass "Goodbye" in place of "Hi! Welcome..."
+greet = createGreeter("Goodbye..");
+greet("Husnain Ahmad");
