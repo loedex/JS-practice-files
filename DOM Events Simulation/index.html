@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events Simulation</title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Type Text">
+    <p id="preview">Live Preview of Text</p>
+
+    <select name="" id="drop">
+        <option value="Apple">Apple</option>
+        <option value="Orange">Orange</option>
+        <option value="Banana">Banana</option>
+        <option value="Watermellon">Watermellon</option>
+        <option value="Mangoes">Mangoes</option>
+    </select>
+    <p id="opt-display">You Selected</p>
+
+
+
+
+
+    <script>
+        document.getElementById('drop').addEventListener('change',e=>{
+            document.getElementById('opt-display').textContent = "Current Selection : "+ e.target.value; 
+        })
+
+        const inp = document.getElementById('myInput');
+        const pre =document.getElementById('preview');
+
+        inp.addEventListener('input',(e)=>{
+            pre.textContent = "Current Text in Your TextBox : "+e.target.value;
+        });
+
+    </script>
+</body>
+</html>
