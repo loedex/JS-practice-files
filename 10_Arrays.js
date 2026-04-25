@@ -267,11 +267,7 @@ for(let i in h){
 }
 
 
-//reduce()
-//runs a function on each array element to produce a single value:
-let arn = [1,2,3,4,5];
-let na = arn.reduce((n1,n2)=>{return n1+n2});
-console.log(na);
+
 
 
 //Pactice Set of Arrays 
@@ -448,3 +444,38 @@ console.log(deliveredOrders);
 const numAr = [2,3,4,5,6,7,8,9,10,12,15];
 const evenNumbers = numAr.filter((v)=>(v%2)===0);
 console.log(evenNumbers);
+
+//reduce()
+//runs a function on each array element to produce a single value:
+let arn = [1,2,3,4,5];
+let na = arn.reduce((n1,n2)=>{return n1+n2});
+console.log(na);
+
+
+
+//reduce()
+const fruitss = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+let ha = fruitss.reduce((accum,current)=>{
+    accum[current] = (accum[current] || 0)+1;
+    return accum;
+},{})
+console.log(ha);
+
+
+
+const profile = {
+    name:"Husnain",
+    age:20,
+    address:{
+        city:"Faisalabad",
+        province:"Punjab",
+        country:"Pakistan"
+    },
+    email:"loedex@yahoo.com"
+};
+console.log(profile);
+console.log(Object.keys(profile));
+console.log(Object.keys(profile.address));
+console.log("Object.values()");
+console.log(Object.values(profile));
+console.log(Object.entries(profile));
